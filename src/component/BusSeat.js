@@ -124,46 +124,46 @@ const BusSeat = () => {
       </Grid>
       <Box mt="100px" ml="30px">
         <Flex flexDirection="row" gap="5">
-        <Button
-              color="#C32629"
-              fontSize="large"
-              fontWeight="600"
-             background="#FEFEFE"
-             _hover={{background:'#DC635B', color:'#FEFEFE'}}
-            >
-              All
-            </Button>
+          <Button
+            color="#C32629"
+            fontSize="large"
+            fontWeight="600"
+            background="#FEFEFE"
+            _hover={{ background: '#DC635B', color: '#FEFEFE' }}
+          >
+            All
+          </Button>
 
-                  
-        <Button
-              color="#C32629"
-              fontSize="large"
-              fontWeight="600"
-             background="#FEFEFE"
-             _hover={{background:'#DC635B', color:'#FEFEFE'}}
-            >
-              ₹ 549
-            </Button>
-            <Button
-              color="#C32629"
-              fontSize="large"
-              fontWeight="600"
-             background="#FEFEFE"
-             _hover={{background:'#DC635B', color:'#FEFEFE'}}
-            >
-              ₹ 1000
-            </Button>
-            <Button
-              color="#C32629"
-              fontSize="large"
-              fontWeight="600"
-             background="#FEFEFE"
-             _hover={{background:'#DC635B', color:'#FEFEFE'}}
-            >
-              ₹ 1500
-            </Button>
 
-          
+          <Button
+            color="#C32629"
+            fontSize="large"
+            fontWeight="600"
+            background="#FEFEFE"
+            _hover={{ background: '#DC635B', color: '#FEFEFE' }}
+          >
+            ₹ 549
+          </Button>
+          <Button
+            color="#C32629"
+            fontSize="large"
+            fontWeight="600"
+            background="#FEFEFE"
+            _hover={{ background: '#DC635B', color: '#FEFEFE' }}
+          >
+            ₹ 1000
+          </Button>
+          <Button
+            color="#C32629"
+            fontSize="large"
+            fontWeight="600"
+            background="#FEFEFE"
+            _hover={{ background: '#DC635B', color: '#FEFEFE' }}
+          >
+            ₹ 1500
+          </Button>
+
+
         </Flex>
       </Box>
 
@@ -179,7 +179,7 @@ const BusSeat = () => {
                 </Flex>
               </Box>
               <Box w="100%">
-                <Grid templateColumns="repeat(5, 1fr)">
+                <Grid templateColumns="repeat(6, 1fr)">
                   {buses[0].seats.sleeper.map((item, ind) => {
                     return (
                       <GridItem key={ind}>
@@ -195,7 +195,7 @@ const BusSeat = () => {
           <Box bg="#FFFFFF" mt="50px" ml="50px" borderRadius="10px" p="10px">
             <Flex>
               <Box>
-              <Flex flexDirection="column">
+                <Flex flexDirection="column">
                   <Image src={Stear} width="50px" height="50px" />
                   <Text fontWeight="bold" mt="190px" transform="rotate(-90deg)">
                     LOWER
@@ -203,7 +203,7 @@ const BusSeat = () => {
                 </Flex>
               </Box>
               <Box w="100%">
-                <Grid templateColumns="repeat(5, 1fr)">
+                <Grid templateColumns="repeat(6, 1fr)">
                   {buses[0].seats.seater.map((item, ind) => {
                     return (
                       <GridItem key={ind}>
@@ -217,20 +217,20 @@ const BusSeat = () => {
           </Box>
         </GridItem>
         <Box>
-       <Box bg="#FFFFFF" mt="50px" ml="50px" borderRadius="10px" p="10px" w="300px" h="300px">
-       <Text fontWeight="800" fontSize="x-large" color="#C32629" textAlign="center">
-        Boarding Point
-       </Text>
-       </Box>
-       <Box bg="#FFFFFF" mt="50px" ml="50px" borderRadius="10px" p="10px" w="300px" h="300px">
-       <Text fontWeight="800" fontSize="x-large" color="#C32629" textAlign="center">
-        Dropping Point
-       </Text>
-       </Box>
-       <Button mt="80px" ml="50px" w="200px" color="#FEFEFE" background="#DC635B" _hover={{background:'#541715'}}>
-        Continue
-       </Button>
-       </Box>
+          <Box bg="#FFFFFF" mt="50px" ml="50px" borderRadius="10px" p="10px" w="300px" h="300px">
+            <Text fontWeight="800" fontSize="x-large" color="#C32629" textAlign="center">
+              Boarding Point
+            </Text>
+          </Box>
+          <Box bg="#FFFFFF" mt="50px" ml="50px" borderRadius="10px" p="10px" w="300px" h="300px">
+            <Text fontWeight="800" fontSize="x-large" color="#C32629" textAlign="center">
+              Dropping Point
+            </Text>
+          </Box>
+          <Button mt="80px" ml="50px" w="200px" color="#FEFEFE" background="#DC635B" _hover={{ background: '#541715' }}>
+            Continue
+          </Button>
+        </Box>
         <GridItem>
 
         </GridItem>
