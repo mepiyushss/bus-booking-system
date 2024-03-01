@@ -1,6 +1,6 @@
 // store.js
 
-import { createStore, combineReducers } from 'redux';
+import { legacy_createStore, combineReducers } from 'redux';
 import searchBarReducer from './reducers/searchBarreducer.js';
 
 // Combine reducers
@@ -9,6 +9,6 @@ const rootReducer = combineReducers({
 });
 
 // Create store
-const store = createStore(rootReducer);
+const store = legacy_createStore(rootReducer);
 
 export default store;

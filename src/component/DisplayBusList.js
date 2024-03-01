@@ -23,7 +23,7 @@ function BusList() {
     const hasValidTo = bus.stops.some((stop) => stop.stopName === to);
     const hasValidAC = AC === "" || bus.isAC === (AC === "AC");
 
-    console.log("hasValidFrom", hasValidFrom);
+    // console.log("hasValidFrom", hasValidFrom);
 
     return hasValidFrom && hasValidTo && hasValidAC;
   });
@@ -35,7 +35,7 @@ function BusList() {
     // This effect runs whenever enableSeat changes
     // You can perform any side effects related to enableSeat here
     // For now, let's just log the value to the console
-    console.log("enableSeat:", enableSeat);
+    // console.log("enableSeat:", enableSeat);
   }, [enableSeat]); // Run this effect whenever enableSeat changes
 
   const displaySeats = () => {
