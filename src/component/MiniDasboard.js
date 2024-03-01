@@ -12,9 +12,10 @@ export default function MiniDashboard() {
     
   return (
     <ChakraProvider>
+      
       <Grid
         templateAreas={`"header header header"
-        "nav  main main"
+        "main  main main"
         "nav  menu menu"
         "footer footer footer"`}
         h="100vh" // Set the height of the grid to 100% of the viewport height

@@ -115,7 +115,7 @@ function BusList() {
 
                 <Box display="flex">
                   <Spacer />
-                  <Button colorScheme="red" onClick={displaySeats}>Toggle Seats</Button>
+                  <Button colorScheme="red" onClick={displaySeats}>Book Seat</Button>
                 </Box>
 
                 {/* </Link> */}

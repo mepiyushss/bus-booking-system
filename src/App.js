@@ -18,13 +18,11 @@ function App() {
   return (
     <ChakraProvider>
        <Provider store={store}>
-      {/* <PassengersDetail></PassengersDetail> */}
+      
       <Router>
         <Routes>
           <Route path="/" exact element={<Dashboard />} />
           <Route path="/Search" element={<SearchBar />} />
-          {/* <Route path="/" exact component={SearchBar} />
-        <Route path="/miniDashboard" component={MiniDashboard} /> */}
           <Route path="/Display-Bus" element={<DisplayBusList />}></Route>
           <Route path="/Seat" element={<BusSeat />} />
           <Route path="/miniDasboard" element={<MiniDasboard />} />
