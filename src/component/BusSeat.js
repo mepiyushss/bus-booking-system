@@ -5,6 +5,7 @@ import Seater from "./Seater.js";
 import Stear from "../assets/steering.png";
 import buses from "../assets/data.js";
 import { Link } from "react-router-dom";
+import FormButton from "./FormButton.js";
 
 
 
@@ -74,17 +75,17 @@ const BusSeat = () => {
             </Flex>
           </Box>
         </GridItem>
-        <Box>
-          <Link to="/passenger">
 
+        <Box  >
+          {/* <Link to="/passenger">
             <Button mt="500px" ml="50px" w="200px" color="#FEFEFE" background="#DC635B" _hover={{ background: '#541715' }}>
               Continue
             </Button>
-          </Link>
+          </Link> */}
+          <FormButton />
         </Box>
-        <GridItem>
-
-        </GridItem>
+        
+        
       </Grid>
     </Box>
   );
