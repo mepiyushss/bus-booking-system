@@ -124,7 +124,7 @@ function BusList() {
               </Box>
               <Box overflowY="scroll">
                   {enableSeat && <BusSeat enable={true} />}
-                  {/* {setEnableSeat(false)} */}
+                  
                   
                 </Box>
             </Flex>

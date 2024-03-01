@@ -4,6 +4,7 @@ import Sleeper from "./Sleeper.js";
 import Seater from "./Seater.js";
 import Stear from "../assets/steering.png";
 import buses from "../assets/data.js";
+import { Link } from "react-router-dom";
 
 const BusSeat = () => {
   return (
@@ -227,9 +228,12 @@ const BusSeat = () => {
               Dropping Point
             </Text>
           </Box>
-          <Button mt="80px" ml="50px" w="200px" color="#FEFEFE" background="#DC635B" _hover={{ background: '#541715' }}>
-            Continue
-          </Button>
+          <Link to="/passenger">
+            <Button mt="80px" ml="50px" w="200px" color="#FEFEFE" background="#DC635B" _hover={{ background: '#541715' }}>
+              Continue
+            </Button>
+          </Link>
+
         </Box>
         <GridItem>
 
