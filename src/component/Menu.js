@@ -5,11 +5,6 @@ import conductor from '../assets/conductor.jpeg'
 
 export default function Menu() {
     return (
-        // <div>
-        //     <Box boxSize='sm'>
-        //         <Image src={conductor} alt='Dan Abramov' />
-        //     </Box>
-        // </div>
         <div>
             <Box w="80%" h="100%">
                 <Image src={conductor} alt='Dan Abramov' w="100%" h="100%" objectFit="cover" />

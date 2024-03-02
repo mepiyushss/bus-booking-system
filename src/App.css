@@ -1,6 +1,8 @@
 html, body{
     padding: 0px;
     margin: 0px;
+    height: 100%;
+    width: 100%;
 }
 
 a{
@@ -12,3 +14,4 @@ a{
     box-sizing: border-box;
     /* color: rgb(224, 228, 230); */
 }
+

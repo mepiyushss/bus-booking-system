@@ -6,7 +6,7 @@
           "stops": [
             {
               "stopName": "Central Station",
-              "arrivalTime": "08:00 AM",
+              "arrivalTime": "08:00 AM", 
               "departureTime": "08:10 AM"
             },
             {

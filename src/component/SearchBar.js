@@ -2,14 +2,14 @@ import { VStack, Stack, Text, Select, Input, Button, useBreakpointValue } from "
 import React, { useEffect, useState } from "react";
 import { connect } from 'react-redux';
 import { setFrom, setTo, setDate, setAC } from '../store/reducers/actions.js';
-import { useDispatch } from 'react-redux'; // Importing useDispatch
+import { useDispatch } from 'react-redux'; 
 import busData from './bus-data.json';
 import { useNavigate } from 'react-router-dom';
 
 function SearchBar({ from, to, date, AC, setFrom, setTo, setDate, setAC }) {
   const today = new Date().toISOString().split("T")[0];
   const [buses, setBuses] = useState(busData.buses);
-  const dispatch = useDispatch(); // Using useDispatch hook
+  const dispatch = useDispatch(); 
   const navigate = useNavigate(); 
 
   useEffect(() => {
@@ -30,8 +30,6 @@ function SearchBar({ from, to, date, AC, setFrom, setTo, setDate, setAC }) {
     dispatch(setDate(date));
     dispatch(setAC(AC));
     navigate("/miniDasboard");
-    // Assuming you're using React Router to handle navigation
-    // Replace Link component with programmatic navigation here if needed
   };
 
   return (
@@ -41,8 +39,8 @@ function SearchBar({ from, to, date, AC, setFrom, setTo, setDate, setAC }) {
           <Text color={"white"} fontWeight={700} lineHeight={1.2} fontSize={useBreakpointValue({ base: "3xl", md: "4xl" })}>
            
           </Text>
-          <Stack direction={"row"}>
-            <Select onChange={(e) => dispatch(setFrom(e.target.value))} value={from} required variant="filled" _focus={{ bg: "white" }} size="lg" placeholder="From">
+          <Stack direction={useBreakpointValue({ base: "column", md: "row" })}>
+            <Select onChange={(e) => dispatch(setFrom(e.target.value))} value={from} required variant="filled" _focus={{ bg: "white" }} size={useBreakpointValue({ base: "lg", md: "xl" })} placeholder="From">
               {buses.reduce((allStops, bus) => {
                 bus.stops.forEach((stop) => {
                   if (!allStops.includes(stop.stopName)) {
@@ -56,7 +54,7 @@ function SearchBar({ from, to, date, AC, setFrom, setTo, setDate, setAC }) {
                 </option>
               ))}
             </Select>
-            <Select onChange={(e) => dispatch(setTo(e.target.value))} value={to} required variant="filled" _focus={{ bg: "white" }} size="lg" placeholder="To">
+            <Select onChange={(e) => dispatch(setTo(e.target.value))} value={to} required variant="filled" _focus={{ bg: "white" }} size={useBreakpointValue({ base: "lg", md: "xl" })} placeholder="To">
               {buses.reduce((allStops, bus) => {
                 bus.stops.forEach((stop) => {
                   if (!allStops.includes(stop.stopName)) {
@@ -70,8 +68,8 @@ function SearchBar({ from, to, date, AC, setFrom, setTo, setDate, setAC }) {
                 </option>
               ))}
             </Select>
-            <Input type="date" min={today} value={date}variant="filled" _focus={{ bg: "white" }} size="lg" onChange={(e) => dispatch(setDate(e.target.value))} />
-            <Button bg={"blue.400"} rounded={"full"} color={"white"} type="submit" backgroundColor={"red"} _hover={{ bg: "red.500" }} w={"30rem"} size="lg">
+            <Input type="date" min={today} value={date} variant="filled" _focus={{ bg: "white" }} size={useBreakpointValue({ base: "lg", md: "xl" })} onChange={(e) => dispatch(setDate(e.target.value))} />
+            <Button bg={"blue.400"} rounded={"full"} color={"white"} type="submit" backgroundColor={"red"} _hover={{ bg: "red.500" }} w={useBreakpointValue({ base: "full", md: "30rem" })} size={useBreakpointValue({ base: "lg", md: "xl" })}>
               SEARCH BUSES
             </Button>
           </Stack>

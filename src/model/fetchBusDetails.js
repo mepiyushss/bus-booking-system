@@ -6,7 +6,6 @@ export default async function fetchBusDetails() {
 
     const data= await axios.get('https://raw.githubusercontent.com/Abhi3391/bus-data/main/bus-data.json')
       .then(response => {
-        // console.log("data",response.data); // Process your JSON data here
         return response.data;
       })
       .catch(error => {

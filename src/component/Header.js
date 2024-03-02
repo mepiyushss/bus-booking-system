@@ -19,8 +19,10 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 
+import { Link } from 'react-router-dom'
 
-const Links = ['Dashboard', 'Projects', 'Team']
+
+const Links = ['Dashboard', 'Projects', 'Team'];
 
 const NavLink = (props) => {
   const { children } = props
@@ -56,19 +58,26 @@ export default function Header() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box><Image
-            borderRadius='full'
-            boxSize='30px'
-            src='https://qualitytransportation.net/wp-content/uploads/2015/11/coach-bus-v2.png' alt='Logo' /></Box>
+            <Box>
+              <Link to='/'>
+                <Image
+                  borderRadius='full'
+                  boxSize='30px'
+                  src='https://qualitytransportation.net/wp-content/uploads/2015/11/coach-bus-v2.png' alt='Logo' />
+              </Link>
+            </Box>
+
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))}
             </HStack>
           </HStack>
-          <Text alignItems={'center'}>
-                Blue Booking System
-          </Text>
+          <Link to='/'>
+            <Text alignItems={'center'}>
+              Blue Booking System
+            </Text>
+          </Link>
           <Flex alignItems={'center'}>
             <Menu>
               <MenuButton
@@ -103,11 +112,7 @@ export default function Header() {
             </Stack>
           </Box>
         ) : null}
-
-        
       </Box>
-
-      {/* <Box p={4}>Main Content Here</Box> */}
     </>
   )
 }

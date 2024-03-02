@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 
 export default function Payment() {
   useEffect(() => {
-    let script; // Define script variable here
-
+    let script; 
     const loadRazorpay = async () => {
       script = document.createElement('script');
       script.src = 'https://checkout.razorpay.com/v1/checkout.js';
@@ -14,7 +13,6 @@ export default function Payment() {
     loadRazorpay();
 
     return () => {
-      // Clean up the script when the component unmounts
       document.body.removeChild(script);
     };
   }, []);
