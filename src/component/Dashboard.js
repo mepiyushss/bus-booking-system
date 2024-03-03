@@ -6,10 +6,10 @@ export default function Dashboard() {
 
   return (
     <>
-      <Header/>
-      <Hero/>
-      <Footer/>
-      </>
+      <Header />
+      <Hero />
+      <Footer />
+    </>
   )
 }
 
