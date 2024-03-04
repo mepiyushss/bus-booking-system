@@ -11,14 +11,15 @@ const Sleeper = ({ item }) => {
       onClick={() => SetSelect(!isSelect)}
       cursor={item.available ? "pointer" : "not-allowed"}
       pointerEvents={item.available ? "" : "none"}
-      style={{
-        '@media only screen and (min-width: 768px)': {  
-        },
-        '@media only screen and (min-width: 481px) and (max-width: 767px)': {  
-        },
-        '@media only screen and (max-width: 480px)': {  
-        },
-      }}
+      // style={{
+      //   '@media only screen and (min-width: 768px)': {  
+      //   },
+      //   '@media only screen and (min-width: 481px) and (max-width: 767px)': {  
+      //   },
+      //   '@media only screen and (max-width: 480px)': {  
+      //   },
+      // }
+    // }
     >
       <Image src={isSelect ? unSelectedImg : selectedImg} alt="Sleeper Image" width="5rem" h="3.5rem" />
       <Text

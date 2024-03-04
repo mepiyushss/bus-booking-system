@@ -19,7 +19,7 @@ function FormButton() {
   
     return (
       <>
-        <Button ref={btnRef} colorScheme='teal' onClick={onOpen}>
+        <Button ref={btnRef} background='#DC635B' color='white' _hover={{background:"#541715"}} onClick={onOpen}>
           Continue
         </Button>
         <Drawer

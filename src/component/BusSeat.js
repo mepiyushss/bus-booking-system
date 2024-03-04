@@ -8,6 +8,7 @@ import FormButton from "./FormButton.js";
 
 
 const BusSeat = () => {
+  console.log("bus seats", buses);
 
   return (
     <Box bg="#F8F8F8" h="100%" p={4}>
@@ -72,7 +73,7 @@ const BusSeat = () => {
           </Box>
         </GridItem>
 
-        <Box>
+        <Box display='flex' alignItems='center'>
           <FormButton />
         </Box>
         

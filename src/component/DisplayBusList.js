@@ -1,12 +1,14 @@
-import { Box, Button, Flex, Spacer } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import fetchBusDetails from "../model/fetchBusDetails.js";
 import BusSeat from "./BusSeat.js";
+import { Box, Button, Flex } from "@chakra-ui/react";
 
 export default function BusList() {
   const { from, to, AC } = useSelector((state) => state.searchBar);
   const [buses, setBuses] = useState([]);
+  const [selectedBusIndex, setSelectedBusIndex] = useState(-1);
+  console.log("selected Bus Index", selectedBusIndex);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,12 +34,6 @@ export default function BusList() {
     return hasValidFrom && hasValidTo && hasValidAC;
   });
 
-  const [enableSeat, setEnableSeat] = useState(false);
-
-  const displaySeats = () => {
-    setEnableSeat((prevState) => !prevState);
-  };
-
   return (
     <div style={{ maxHeight: "1000px", overflowY: "auto" }}>
       <Flex
@@ -48,7 +44,7 @@ export default function BusList() {
         boxShadow="0px 4px 8px rgba(0, 0, 0, 0.2)"
       >
         {filteredBuses.length > 0 ? (
-          filteredBuses.map((bus) => (
+          filteredBuses.map((bus, index) => (
             <Flex
               key={bus.busNumber}
               alignItems="center"
@@ -106,22 +102,22 @@ export default function BusList() {
                 </Box>
 
                 <Box display="flex">
-                  <Spacer />
-                  <Button colorScheme="red" onClick={displaySeats}>Book Seat</Button>
+                  <Button colorScheme="red" onClick={() => setSelectedBusIndex(index)}>
+                    Book Seat
+                  </Button>
                 </Box>
-
               </Box>
               <Box overflowY="scroll">
-                {enableSeat && <BusSeat enable={true} />}
+                {selectedBusIndex === index && <BusSeat enable={true} />}
               </Box>
             </Flex>
           ))
         ) : (
           <div>No buses available</div>
         )}
-
       </Flex>
     </div>
   );
 }
+
 
