@@ -13,6 +13,7 @@ import Payment from "./component/Payment.js";
 import SideNavbar from "./component/SideNavbar.js";
 import MiniDasboard from "./component/MiniDasboard.js";
 import store from './store/store.js';
+import BookingHistory from './component/SearchHistory.js';
 
 
 function App() {
@@ -30,6 +31,8 @@ function App() {
           <Route path="/passenger" element={<PassengersDetail />} />
           <Route path="/payment" element={<Payment/>} />
           <Route path="/sideNavbar" element={<SideNavbar/>} />
+          <Route path="/history" element={<BookingHistory/>} />
+
         </Routes>
       </Router>
       </Provider>

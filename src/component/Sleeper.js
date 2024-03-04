@@ -1,5 +1,7 @@
-import { Box, Image, Text } from '@chakra-ui/react'
 import React, { useState } from 'react'
+
+import { Box, Image, Text } from '@chakra-ui/react'
+
 import selectedImg from "../assets/sleeper.png"
 import unSelectedImg from "../assets/sleep.png"
  

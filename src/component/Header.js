@@ -95,7 +95,10 @@ export default function Header() {
               </MenuButton>
               <MenuList>
                 <MenuItem>Profile</MenuItem>
+                <Link to='/history'>
+
                 <MenuItem>Booking History</MenuItem>
+                </Link>
                 <MenuDivider />
                 <MenuItem>Cancel ticket</MenuItem>
               </MenuList>

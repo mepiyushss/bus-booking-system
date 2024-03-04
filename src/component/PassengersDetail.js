@@ -2,15 +2,11 @@ import { FormControl, FormLabel } from '@chakra-ui/react'
 import { Input, Flex, Box, Radio, Button } from '@chakra-ui/react'
 
 import React from 'react'
-// import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
 export default function PassengersDetail() {
 
-    // const [input, setInput] = useState('')
-    // const handleInputChange = (e) => setInput(e.target.value)
-    // const isError = input === ''
     return (
         <Flex >
             <Box bg="rgba(255, 255, 255, 0.8)" p={8} filter='auto' blur='0px' borderRadius="md" boxShadow="lg"

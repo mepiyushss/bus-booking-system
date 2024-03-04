@@ -1,10 +1,9 @@
-// import data from '../component/bus-data.json';
 import axios from 'axios';
 
 
 export default async function fetchBusDetails() {
 
-    const data= await axios.get('https://raw.githubusercontent.com/Abhi3391/bus-data/main/bus-data.json')
+    const data= await axios.get('https://raw.githubusercontent.com/Abhi3391/react-training-project-bus-ticket-booking/main/src/component/bus-data.json')
       .then(response => {
         return response.data;
       })

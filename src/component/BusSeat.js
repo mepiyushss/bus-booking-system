@@ -1,5 +1,7 @@
-import { Box, Flex, Grid, GridItem, Text, Image } from "@chakra-ui/react";
 import React from "react";
+
+import { Box, Flex, Grid, GridItem, Text, Image } from "@chakra-ui/react";
+
 import Sleeper from "./Sleeper.js";
 import Seater from "./Seater.js";
 import Stear from "../assets/steering.png";

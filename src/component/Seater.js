@@ -1,5 +1,7 @@
-import { Box, Image, Text, useBreakpointValue } from '@chakra-ui/react';
 import React, { useState } from 'react';
+
+import { Box, Image, Text, useBreakpointValue } from '@chakra-ui/react';
+
 import BookedSeat from '../assets/armchair-grey.png';
 import NotBooked from '../assets/seat.png';
  

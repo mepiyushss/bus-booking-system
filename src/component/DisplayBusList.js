@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
+
+import { Box, Button, Flex } from "@chakra-ui/react";
+
 import fetchBusDetails from "../model/fetchBusDetails.js";
 import BusSeat from "./BusSeat.js";
-import { Box, Button, Flex } from "@chakra-ui/react";
 
 export default function BusList() {
   const { from, to, AC } = useSelector((state) => state.searchBar);

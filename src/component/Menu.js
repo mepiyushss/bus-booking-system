@@ -1,6 +1,8 @@
+import React from 'react'
+
 import { Image } from '@chakra-ui/image'
 import { Box } from '@chakra-ui/layout'
-import React from 'react'
+
 import conductor from '../assets/conductor.jpeg'
 
 export default function Menu() {

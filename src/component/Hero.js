@@ -1,6 +1,7 @@
+import React from "react";
+
 import { Flex } from "@chakra-ui/react";
 
-import React from "react";
 import backgroundImage from "../assets/Hero.jpeg";
 import SearchBar from "./SearchBar.js";
 
