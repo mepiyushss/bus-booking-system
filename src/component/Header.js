@@ -94,9 +94,11 @@ export default function Header() {
                 />
               </MenuButton>
               <MenuList>
+                <Link to='/profile'>
                 <MenuItem>Profile</MenuItem>
-                <Link to='/history'>
+                </Link>
 
+                <Link to='/history'>
                 <MenuItem>Booking History</MenuItem>
                 </Link>
                 <MenuDivider />

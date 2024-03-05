@@ -24,6 +24,7 @@ const SideNavbar = () => {
             <Checkbox size='lg' colorScheme='green'ml='1rem'> Non AC</Checkbox>
           </Flex>
         </Box>
+        
         <Box h="50%" p={4} >
           <Text fontWeight="bold" mb={2}>ARRIVAL TIME</Text>
           <Flex  direction='column' borderWidth="1px" borderColor='black'p='4' borderRadius='10'>

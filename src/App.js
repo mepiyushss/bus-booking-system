@@ -14,6 +14,7 @@ import SideNavbar from "./component/SideNavbar.js";
 import MiniDasboard from "./component/MiniDasboard.js";
 import store from './store/store.js';
 import BookingHistory from './component/SearchHistory.js';
+import Profile from './component/Profile.js'
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/payment" element={<Payment/>} />
           <Route path="/sideNavbar" element={<SideNavbar/>} />
           <Route path="/history" element={<BookingHistory/>} />
+          <Route path="/profile" element={<Profile/>} />
 
         </Routes>
       </Router>
