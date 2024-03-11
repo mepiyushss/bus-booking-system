@@ -59,7 +59,12 @@ export default function BusList() {
               boxShadow="0px 2px 4px rgba(0, 0, 0, 0.1)"
               flexDirection="column"
             >
-              <Box w="100%" display="flex" flexDirection="row" justifyContent="space-between">
+              <Box
+                w="100%"
+                display="flex"
+                flexDirection="row"
+                justifyContent="space-between"
+              >
                 <Flex flexDirection="column">
                   <Box>{bus.busName}</Box>
                   <Box>Bus Number: {bus.busNumber}</Box>
@@ -104,7 +109,10 @@ export default function BusList() {
                 </Box>
 
                 <Box display="flex">
-                  <Button colorScheme="red" onClick={() => setSelectedBusIndex(index)}>
+                  <Button
+                    colorScheme="red"
+                    onClick={() => setSelectedBusIndex(index)}
+                  >
                     Book Seat
                   </Button>
                 </Box>
@@ -121,5 +129,3 @@ export default function BusList() {
     </div>
   );
 }
-
-
